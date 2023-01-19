@@ -1,0 +1,11 @@
+{
+  "name": "flex-custom-elements",
+  "version": "1.0.0",
+  "description": "Flex box custom html ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+  },
+  "author": "Artem Paskal",
+  "license": "ISC"
+}
