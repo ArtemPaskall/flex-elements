@@ -7,8 +7,7 @@ class FlexLayout extends HTMLElement {
     this.style.display = 'flex' 
     this.style.flexDirection = 'row' 
     this.style.justifyContent = 'center' 
-    this.style.alignItems = 'center' 
-      console.log(this.children);
+    console.log(this.children[1]);
     
     [...this.children].forEach(el => {
       shadow.appendChild(el);

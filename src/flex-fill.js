@@ -1,14 +1,14 @@
-// class FlexFillWithGrow extends HTMLElement {
+class FlexFillWithGrow extends HTMLElement {
   
-//   constructor() {
-//     super();
-    
-//   }
-// }
+  constructor() {
+    super();
 
-// [...Array(13).keys()].forEach(grow =>
-//   customElements.define(`flex-${grow}`, FlexFillWithGrow)
-// )
+    const grow = this.localName.slice(this.localName.indexOf('-') + 1)
+    this.style.flex = grow
+
+    console.log();
+  }
+}
 
 function defineElement(classToCopy, elmname) {
   let copy = class extends classToCopy {}
@@ -16,5 +16,5 @@ function defineElement(classToCopy, elmname) {
 }
 
 [...Array(13).keys()].forEach(grow =>
-  defineElement(HTMLElement, `flex-${grow}`)
+  defineElement(FlexFillWithGrow, `flex-${grow}`)
 )
