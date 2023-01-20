@@ -6,7 +6,21 @@ class FlexFillWithGrow extends HTMLElement {
     const grow = this.localName.slice(this.localName.indexOf('-') + 1)
     this.style.flex = grow
 
-    console.log();
+    function changeStyles() {
+      console.log(this);
+      if (window.innerWidth < 768) {
+        if (this.getAttribute('class') === '.side-indents') {
+          this.style.display = "none"
+        }
+      } else {
+        if (this.getAttribute('class') === '.side-indents') {
+          this.style.display = "block"
+        }
+      }
+    }
+
+    changeStyles.call(this)
+    window.addEventListener('resize', changeStyles.bind(this))
   }
 }
 
