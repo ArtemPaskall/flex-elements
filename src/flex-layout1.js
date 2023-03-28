@@ -7,18 +7,14 @@ class FlexLayout extends HTMLElement {
     this.style.display = 'flex' 
     this.style.flexDirection = 'row' 
     this.style.justifyContent = 'center' 
-    // this.children[0].setAttribute('class', '.side-indents')
-    // this.children[1].setAttribute('class', '.main-content')
-    // this.children[2].setAttribute('class', '.side-indents')
+    this.children[0].setAttribute('class', '.side-indents')
+    this.children[1].setAttribute('class', '.main-content')
+    this.children[2].setAttribute('class', '.side-indents')
  
 
     ;[...this.children].forEach(el => {
       shadow.appendChild(el);
     })
-
-    this.children[0].className = '.side-indents'
-    this.children[1].className = '.main-content'
-    this.children[2].className = '.side-indents'
   }
 }
 
